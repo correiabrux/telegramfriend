@@ -1,0 +1,2 @@
+telepot==12.5
+newsapi-python==0.0.2
