@@ -30,6 +30,10 @@ docker build -t bot .
 docker run -e telegramtoken='YOURTELEGRAMKEY' -e newsapikey='YOURNEWSAPIKEY' bot
 ```
 
+### Tests
+Now, you need to send `news` on the telegram to recieve today news.
+
+
 ## Authors
 
 * **Bruno Correia** - *Initial work* - [Linkedin](https://www.linkedin.com/in/bruno-leite-62825b39/)
