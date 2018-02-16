@@ -20,7 +20,7 @@ def proccess(chat_id, content):
         content = "News Delivered :)"
         news(chat_id)
     else:
-        content = "Não entendi :("
+        content = "Sorry, I do not understand."
     sendMsg(chat_id, content)   
 
 def news(chat_id):
