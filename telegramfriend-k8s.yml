@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: telegramfriend
 spec:
+  selector:
+    matchLabels:
+      app: telegramfriend
   replicas: 1
   template:
     metadata:
@@ -10,10 +13,10 @@ spec:
         app: telegramfriend
     spec:
       containers:
-        - name: telegramfriend
-          image: correiabrux/telegramfriend:1.0
-          env:
-          - name: telegramtoken 
-          value: "YOURTELEGRAMKEY"
-          - name: newsapikey
+      - name: telegramfriend
+        image: correiabrux/telegramfriend:1.0
+        env:
+        - name: newsapikey
           value: "YOURNEWSAPIKEY"
+        - name: telegramtoken
+          value: "YOURTELEGRAMKEY"          
