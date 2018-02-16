@@ -19,5 +19,17 @@ git clone git@github.com:correiabrux/telegramfriend.git
 ```
 
 ```
+cd telegramfriend
+```
+
+```
+docker build -t bot .
+```
+
+```
 docker run -e telegramtoken='YOURTELEGRAMKEY' -e newsapikey='YOURNEWSAPIKEY' bot
 ```
+
+## Authors
+
+* **Bruno Correia** - *Initial work* - [Linkedin](https://www.linkedin.com/in/bruno-leite-62825b39/)
