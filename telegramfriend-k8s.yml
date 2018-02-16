@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: telegramfriend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: telegramfriend
+    spec:
+      containers:
+        - name: telegramfriend
+          image: correiabrux/telegramfriend:1.0
+          env:
+          - name: telegramtoken 
+          value: "YOURTELEGRAMKEY"
+          - name: newsapikey
+          value: "YOURNEWSAPIKEY"
