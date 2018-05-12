@@ -19,8 +19,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploy"
-                sh 'gcloud container clusters get-credentials mycluster --zone us-central1-a --project myclusterk8s'
-                sh 'kubectl set image deployment/telegramfriend telegramfriend=correiabrux/telegramfriend:${BUILD_NUMBER}'
+                sh 'gcloud container clusters get-credentials cluster-1 --zone us-central1-a --project myclusterk8s'
+                sh 'kubectl set image -n telegramfriend deployment/telegramfriend telegramfriend=correiabrux/telegramfriend:${BUILD_NUMBER}'
             }
         }
     }
